@@ -22,11 +22,11 @@
 
 ## Contribution
 
-We welcome contributions from the community! If you have suggestions, bug reports, or want to contribute with code, please open an issue on [GitHub Issues](link_to_repository/issues).
+We welcome contributions from the community! If you have suggestions, bug reports, or want to contribute with code, please open an issue on [GitHub Issues](https://github.com/XPocketMC/AnimatedScoreboard-PMMP/issues).
 
 ## License
 
-This plugin is licensed under the [GNU PUBLIC LICENSE](LICENSE).
+This plugin is licensed under the [ GPL-3.0 license](LICENSE).
 
 ---
 
