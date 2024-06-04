@@ -1,3 +1,5 @@
 name: AnimatedScoreboard
+main: XPocketMC\AnimatedScoreboard\Main
 api: 5.0.0
 version: 1.0
+author: XPocketMC
