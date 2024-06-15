@@ -10,8 +10,7 @@ use pocketmine\utils\Config;
 use pocketmine\network\mcpe\protocol\SetDisplayObjectivePacket;
 use pocketmine\network\mcpe\protocol\SetScorePacket;
 use pocketmine\network\mcpe\protocol\types\ScorePacketEntry;
-use pocketmine\Server;
-use XPocketMC\AnimatedScoreboard\GameMode;
+
 class Main extends PluginBase implements Listener {
 
     private $scoreboardTitle = "";
@@ -64,13 +63,12 @@ class Main extends PluginBase implements Listener {
         $scorePacket->type = SetScorePacket::TYPE_CHANGE;
         $scorePacket->entries = [];
 
-        $server = $this->getServer();
         $memoryUsage = round(memory_get_usage(true) / 1024 / 1024);
         $totalMemory = round(memory_get_peak_usage(true) / 1024 / 1024);
 
         foreach ($this->scoreboardLines as $lineNumber => $lineText) {
             $lineText = str_replace(
-                ["{player}", "{gamemode}", "{memory}", "{totalMemory}"],
+                ["{{player_name}}", "{{gamemode}}", "{{memory}}", "{{total_memory}}"],
                 [$player->getName(), $player->getGamemode()->getName(), $memoryUsage, $totalMemory],
                 $lineText
             );
