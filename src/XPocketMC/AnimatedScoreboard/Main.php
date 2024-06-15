@@ -11,7 +11,7 @@ use pocketmine\network\mcpe\protocol\SetDisplayObjectivePacket;
 use pocketmine\network\mcpe\protocol\SetScorePacket;
 use pocketmine\network\mcpe\protocol\types\ScorePacketEntry;
 use pocketmine\Server;
-
+use XPocketMC\AnimatedScoreboard\Gamemode;
 class Main extends PluginBase implements Listener {
 
     private $scoreboardTitle = "";
