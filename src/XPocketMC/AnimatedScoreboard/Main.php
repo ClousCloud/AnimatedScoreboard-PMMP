@@ -71,7 +71,7 @@ class Main extends PluginBase implements Listener {
         foreach ($this->scoreboardLines as $lineNumber => $lineText) {
             $lineText = str_replace(
                 ["{player}", "{gamemode}", "{memory}", "{totalMemory}"],
-                [$player->getName(), $this->getGamemodeName($player->getGamemode()->getMagicNumber()), $memoryUsage, $totalMemory],
+                [$player->getName(), $player->getGamemode()->getName(), $memoryUsage, $totalMemory],
                 $lineText
             );
             $lineText = $this->colorize($lineText);
@@ -108,20 +108,5 @@ class Main extends PluginBase implements Listener {
 
     private function colorize(string $text): string {
         return str_replace("&", "§", $text);
-    }
-
-    private function getGamemodeName(int $gamemode): string {
-        switch ($gamemode) {
-            case 0:
-                return "SURVIVAL";
-            case 1:
-                return "CREATIVE";
-            case 2:
-                return "ADVENTURE";
-            case 3:
-                return "SPECTATOR";
-            default:
-                return "UNKNOWN";
-        }
     }
 }
